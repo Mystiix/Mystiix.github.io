@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .background {
+          background-color: rgb(39, 38, 38);
+        }
+        .font{
+            font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+            color: white;
+            text-align: center;
+            padding-top: 10px;
+        }
+        .picture{
+            border: 3px groove white;
+            margin-top: 10px;
+        }
+
+        .picture1{
+            margin-top: 20px;
+        }
+        .pictureright{
+            float: right;
+        }
+        .picturerotate{
+            transform: rotate(270deg);
+            margin-right: 25px;
+        }
+        .center{
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+    </style>
+    
+</head>
+<body class="background">
+<div class="font">
+     
+    &#10084; 22.08.2021 &#10084;
+</div>
+
+<div class="font">
+    solange hast du mich schon ausgehalten 
+</div>
+<div id="time-elapsed"class="font">
+
+<script>
+    var startDateTime = new Date(2021,7,22,0,0,0,0); // YYYY (M-1) D H m s ms (start time and date from DB)
+var startStamp = startDateTime.getTime();
+
+var newDate = new Date();
+var newStamp = newDate.getTime();
+
+var startmonth = startDateTime.getMonth();
+var newmonth = newDate.getMonth();
+
+var startday = startDateTime.getDate();
+var newday = newDate.getDate();
+
+var timer; // for storing the interval (to stop or pause later if needed)
+
+function updateClock() {
+    newDate = new Date();
+    newStamp = newDate.getTime();
+    var diff = Math.round((newStamp-startStamp)/1000);
+    
+    var d = Math.floor(diff/(24*60*60)); /* though I hope she won't be working for consecutive days :) */
+    diff = diff-(d*24*60*60);
+    var h = Math.floor(diff/(60*60));
+    diff = diff-(h*60*60);
+    var m = Math.floor(diff/(60));
+    diff = diff-(m*60);
+    var s = diff;
+    var mo = 11+ newmonth - startmonth;
+    var da = 30 + newday-startday;
+    
+    document.getElementById("time-elapsed").innerHTML = d+" Tage, "+h+" Stunden, "+m+" Minuten, "+s+" Sekunden "+"<br>oder<br> " +mo+" Monate und "+da+" Tage";
+}
+
+timer = setInterval(updateClock, 1000);
+</script>
+
+</div>
+
+<div> 
+    <img src="img/Sophiearne2.JPG" width="150" height="200" class="picture pictureright">
+</div>
+<div>
+    <img src="img/Sophiearne3.JPG" width="140" height="256" class="picture">
+
+</div>
+<div>
+    <img src="img/Sophiearne4.JPG" width="150" height="200" class="picture pictureright">
+
+</div>
+
+<div>
+    <img src="img/Sophiearne5.JPG" width="140" height="186"class="picture">
+</div>
+<div>
+    <img src="img/Sophiearne6.JPG" width="274" height="150" class="picture" >
+</div>
+
+
+    <img src="img/Sophiearne8.JPG" width="120" height="160" class="picture ">
+
+
+    <img src="img/Sophiearne9.JPG" width="150" height="200" class="picture pictureright">
+
+</body>
+</html>

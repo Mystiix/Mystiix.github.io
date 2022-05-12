@@ -1,0 +1,10 @@
+{
+    "name": "Sophies App",
+    "short_name": "Sophie",
+    "theme_color": "rgb(99,99,99)",
+    "background_color": "rgb(99,99,99)",
+    "display": "fullscreen",
+    "orientation": "portrait",
+    "scope": "/",
+    "start_url": "/"
+  }

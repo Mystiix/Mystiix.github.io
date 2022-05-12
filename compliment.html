@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        function getcompliment(){
+        var compliment = ["Du bist eine super Hundemummy <3", "Beste Köchin ever","Queen",
+                            " Ich Liebe dich ", "Schicke Haare heute","Pauli freut sich schon auf dich",
+                            " Du bist die beste Freundin", " Ran an deine Aufgaben heute","Du schaffst das",
+                            "Wooow","Bin schon wieder sprachlos", "OMG wie schön","Schick schick",
+                            "Fühl dich gedrückt", "Mein Baby", "Du riechst aber gut heute"];
+        b=Math.floor(Math.random() * compliment.length);
+        a = compliment[b];
+        document.getElementById("compliment").innerHTML = a;
+        }
+    </script>
+    <style>
+        .picture{
+            border: 3px groove white;
+            margin-top: 5px;
+        }
+        .center{
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+         .button6{
+                    display: flex;
+                    margin:20px;
+                    text-decoration:none;
+                    font-family:Arial;
+                    font-size:16px;
+                    border:1px solid #D81E00;
+                    border-radius:50%;
+                    color:#fff;
+                    background-color:#EE4124;
+                    width:100px;
+                    height:100px;
+                    text-align:center;
+                    vertical-align:middle;
+                    padding-top:40px;
+                    overflow:hidden;
+                    font-weight:bold;
+                    box-shadow:inset 3px 3px 4px #D81E00;
+                    text-shadow:0px 0px 4px #AE1900;
+                    margin-left: auto;
+                    margin-right: auto;
+                    
+         }
+
+        .background {
+          background-color: rgb(39, 38, 38);
+        }
+        .font{
+            font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+            color: white;
+            text-align: center;
+            padding-top: 10px;
+        }
+    </style>
+</head>
+<body class="background">
+    
+     <button onclick = "getcompliment()" class="button6">Press me&#10084;</button>
+     <p id="compliment" class="font"></p>
+
+        <div class="center">
+            <img src="img/Sophiearne7.JPG" width="240" height="320" class="picture">
+        </div>
+
+    
+    
+   
+</body>
+</html>
