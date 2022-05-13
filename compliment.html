@@ -5,6 +5,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
     <script>
         function getcompliment(){
         var compliment = ["Du bist eine super Hundemummy <3", "Beste Köchin ever","Queen",
@@ -60,11 +61,14 @@
             text-align: center;
             padding-top: 10px;
         }
+        .icon{
+            padding-left: 30px;
+        }
     </style>
 </head>
 <body class="background">
     
-     <button onclick = "getcompliment()" class="button6">Press me&#10084;</button>
+     <button onclick = "getcompliment()" class="button6"><i class="material-icons icon">favorite_border</i></button>
      <p id="compliment" class="font"></p>
 
         <div class="center">
