@@ -77,10 +77,10 @@ function updateClock() {
     var m = Math.floor(diff/(60));
     diff = diff-(m*60);
     var s = diff;
-    var mo = 11+ newmonth - startmonth;
-    var da = 30 + newday-startday;
+    var mo = 11+ newmonth - startmonth-12;
+    var da = (30 + newday-startday)%30;
     
-    document.getElementById("time-elapsed").innerHTML = d+" Tage, "+h+" Stunden, "+m+" Minuten, "+s+" Sekunden "+"<br>oder<br> " +mo+" Monate und "+da+" Tage";
+    document.getElementById("time-elapsed").innerHTML = d+" Tage, "+h+" Stunden, "+m+" Minuten, "+s+" Sekunden "+"<br>oder<br> "+"1 Jahr " +mo+" Monate und "+da+" Tage";
 }
 
 timer = setInterval(updateClock, 1000);
